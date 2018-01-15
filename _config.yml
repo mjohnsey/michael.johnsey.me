@@ -43,3 +43,4 @@ plugins:
 exclude:
   - Makefile
   - .gitkeep
+  - README.md
