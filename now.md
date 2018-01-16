@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Now
-permalink: /now
+permalink: /now.html
 ---
 _What is this? [Derek Sivers explains.](https://nownownow.com/about)_
 
