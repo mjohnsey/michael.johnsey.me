@@ -20,3 +20,7 @@ deploy: build empty-bucket
 .PHONY: empty-bucket
 empty-bucket:
 	aws s3 rm s3://michael.johnsey.me/* --profile personal
+
+.PHONY: update-cert
+update-cert:
+	sudo certbot certonly --manual -d michael.johnsey.me
