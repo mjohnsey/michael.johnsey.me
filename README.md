@@ -11,3 +11,9 @@ make update-cert
 ```
 
 This command will spit out a key + value that you have to store in your S3 bucket in the `.well-known/acme-challenge` folder while running through the updater.
+
+## Acknowledgments
+
+The site's theme is jekyll-athena.
+
+Favicon was generated using [Paul Ferrett's Generator](https://paulferrett.com/fontawesome-favicon).
