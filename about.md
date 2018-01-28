@@ -4,4 +4,6 @@ title: About
 permalink: /about.html
 ---
 
-TODO: This is where you will find cool info about me.
+Hello, my name is Michael Johnsey. I'm a Software Engineer at Mosaik in Memphis, TN.
+
+More about me coming soon!
