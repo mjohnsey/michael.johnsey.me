@@ -1,4 +1,5 @@
 # michael.johnsey.me
+[![Build Status](https://travis-ci.org/mjohnsey/michael.johnsey.me.svg?branch=master)](https://travis-ci.org/mjohnsey/michael.johnsey.me)
 
 This is a jekyll static site. Fun stuff can be found in the `Makefile`.
 
