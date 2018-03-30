@@ -22,11 +22,8 @@ _**TLDR:** This is not Twitter or Facebook. You won't find my latest picture or 
 
 ## What was I doing in the past?
 
-<ul>
 {% for now in now_entries offset: 1%}
-  <li>
-    <p>{{now.text}}</p>
-    <em>{{now.date | date: "%Y-%m-%d" }}</em>
-  </li>
+  *{{now.date | date: "%Y-%m-%d" }}*
+
+  {{now.text}}
 {% endfor %}
-</ul>
