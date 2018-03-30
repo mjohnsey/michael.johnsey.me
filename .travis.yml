@@ -3,6 +3,7 @@ rvm:
 - 2.3.4
 
 before_script:
+ - sudo update-ca-certificates
  - chmod +x ./scripts/cibuild # or do this locally and commit
 
 # Assume bundler is being used, therefore
@@ -13,4 +14,4 @@ env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
-sudo: false # route your build to the container-based infrastructure for a faster build
+sudo: true
