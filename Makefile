@@ -19,7 +19,7 @@ deploy: build empty-bucket
 
 .PHONY: empty-bucket
 empty-bucket:
-	aws s3 rm s3://michael.johnsey.me/* --profile personal
+	aws s3 rm s3://michael.johnsey.me --profile personal --recursive
 
 .PHONY: update-cert
 update-cert:
