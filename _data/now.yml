@@ -21,4 +21,6 @@ entries:
   - date: "2018-08-13"
     text: |
       Been very busy while Mosaik was in the process of being [acquired by Ookla](https://www.speedtest.net/insights/blog/mosaik-is-joining-ookla). Now getting ready to marry the girl of my dreams.
-
+  - date: "2018-10-05"
+    text: |
+      Tracking down some open source to contribute to for [Hacktoberfest 2018](https://hacktoberfest.digitalocean.com).
