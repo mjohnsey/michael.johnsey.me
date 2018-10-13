@@ -25,3 +25,4 @@ deploy:
   acl: public_read
   on:
     repo: mjohnsey/michael.johnsey.me
+  skip_cleanup: true
