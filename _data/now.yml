@@ -24,3 +24,6 @@ entries:
   - date: "2018-10-05"
     text: |
       Tracking down some open source to contribute to for [Hacktoberfest 2018](https://hacktoberfest.digitalocean.com).
+  - date: "2018-10-13"
+    text: |
+      Got Travis setup on this blog, now `master` pushes go to prod!
