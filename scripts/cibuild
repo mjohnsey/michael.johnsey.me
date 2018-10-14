@@ -2,4 +2,6 @@
 set -e # halt script on error
 
 bundle exec jekyll build
-bundle exec htmlproofer ./_site
+# Have to ignore this website because it will keep it from deploying new pages since the new page doesn't exist yet
+# (Computers, amirite?)
+bundle exec htmlproofer --url-ignore "/michael.johnsey.me/" ./_site
