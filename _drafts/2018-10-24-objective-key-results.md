@@ -1,7 +1,7 @@
 ---
 title: "OKR: Objectives and Key Results"
 layout: post
-date: 2018-10-25 23:00
+date: 2019-01-24 22:00
 ---
 
 Objectives and Key Results are a simple concept that does heavy lifting (all the best concepts share this commonality).
@@ -32,15 +32,20 @@ Here's an example set of Objectives and Key Results that a hotel might make at t
   - Key Result: Increase revenue from breakfast by 20%.
   - Key Result: Increase average number of guests served breakfast daily to 25.
 
+### An Example Using the Empire
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/aHOONTU9oHWDM" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+[OKRs, Exaplained with "Star Wars"](https://www.slideshare.net/AndrewCedotal/okrs-explained-with-star-wars){:target="_blank"} from [Andrew Cedotal](https://www.slideshare.net/AndrewCedotal){:target="_blank"}
+
 ## Further Reading
 
-- [Measure What Matters](https://amzn.to/2D4rkJk) by John Doerr is the deep dive into OKRs authored by the man who brought OKRs to Google in its infancy. John Doerr spoke about OKRs at [TED2018 in Vancouver](https://www.ted.com/talks/john_doerr_why_the_secret_to_success_is_setting_the_right_goals/up-next).
-- Good basic OKR explainer can be found [here on Medium](https://medium.com/startup-tools/okrs-5afdc298bc28). Also see the Google Playbook below.
-- [High Output Management](https://amzn.to/2qccY1d) by Andy Grove is a management resource that is touted by thinkers such as Marc Andreessen and Peter Drucker.
+- [Measure What Matters](https://amzn.to/2D4rkJk){:target="_blank"} by John Doerr is the deep dive into OKRs authored by the man who brought OKRs to Google in its infancy. John Doerr spoke about OKRs at [TED2018 in Vancouver](https://www.ted.com/talks/john_doerr_why_the_secret_to_success_is_setting_the_right_goals/up-next){:target="_blank"}.
+- Good basic OKR explainer can be found [here on Medium](https://medium.com/startup-tools/okrs-5afdc298bc28){:target="_blank"}. Also see the Google Playbook below.
+- [High Output Management](https://amzn.to/2qccY1d){:target="_blank"} by Andy Grove is a management resource that is touted by thinkers such as Marc Andreessen and Peter Drucker.
 
 ## Resources
 
-- [Google's OKR Playbook](https://www.whatmatters.com/resources/googles-okr-playbook)
-- The first time I read about OKRs came from going through the [awesome lists repository](https://awesome.re), which is one of my favorite ways to find new libraries and information on programming topics. The [awesome-okr repository](https://github.com/domenicosolazzo/awesome-okr) is a great place to find more resources specific to OKRs.
-- John Doerr's [example OKR cycle](https://www.whatmatters.com/resources/a-typical-okr-cycle)
-- [Website](https://www.whatmatters.com) for John Doerr's Measure What Matters book
+- [Google's OKR Playbook](https://www.whatmatters.com/resources/googles-okr-playbook){:target="_blank"}
+- John Doerr's [example OKR cycle](https://www.whatmatters.com/resources/a-typical-okr-cycle){:target="_blank"}
+- [Website](https://www.whatmatters.com){:target="_blank"} for John Doerr's Measure What Matters book
+- The first time I read about OKRs came from going through the [awesome lists repository](https://awesome.re){:target="_blank"}, which is one of my favorite ways to find new libraries and information on programming topics. The [awesome-okr repository](https://github.com/domenicosolazzo/awesome-okr){:target="_blank"} is a great place to find more resources specific to OKRs.
