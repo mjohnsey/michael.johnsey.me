@@ -1,10 +1,11 @@
 ---
-title: "OKR: Objectives and Key Results"
+title: "Objectives and Key Results"
+subtitle: "Short introduction to OKRs"
 layout: post
 date: 2019-01-24 22:00
 ---
 
-Objectives and Key Results are a simple concept that does heavy lifting (all the best concepts share this commonality).
+Objectives and Key Results (OKRs) are a simple concept that does heavy lifting, all the best concepts share this commonality.
 
 The TLDR goes something like: Objectives and Key Results are a tool used to create alignment in an organization, by setting goals and establishing what success will look like when you achieve that goal.
 
