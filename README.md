@@ -18,3 +18,5 @@ This command will spit out a key + value that you have to store in your S3 bucke
 The site's theme is jekyll-athena.
 
 Favicon was generated using [Paul Ferrett's Generator](https://paulferrett.com/fontawesome-favicon).
+
+Revision tracking provided by [stigok/jekyll-post-revision](https://github.com/stigok/jekyll-post-revision).

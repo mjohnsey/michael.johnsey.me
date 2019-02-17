@@ -1,0 +1,16 @@
+{% if page.revisions.size > 0 %}
+<section>
+    <h3>Revisions:</h3>
+    <ul>
+        {% for rev in page.revisions %}
+        <li>
+            <div class="post-meta">
+                [<span class="commitish"><a href="{{rev.url}}" target="_blank">{{ rev.hash }}</a></span>]
+                {{ rev.date | date_to_string }} -
+                <span class="post-author">{{ rev.author }}</span> - {{ rev.message }}
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endif %}
