@@ -44,3 +44,6 @@ exclude:
   - scripts/
   - .ruby-gemset
   - .ruby-version
+
+revision:
+  max_count: 3
