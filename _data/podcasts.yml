@@ -5,6 +5,13 @@ podcasts:
   - title: "99% Invisible"
     url: "https://99percentinvisible.org"
     description: Great podcast on design in your everyday life. New episodes are always pushed to the front of my playlist.
+    favorite_episodes:
+      - title: "#316 The Shipping Forecast"
+        url: "https://99percentinvisible.org/episode/the-shipping-forecast"
+        description: "Learn about the BBC Radio's Shipping Forecast and how some people use it to fall asleep. Also an exploration into other audio that people use to fall asleep like [Sleep with Me Podcast](https://www.sleepwithmepodcast.com)."
+      - title: "#369 Wait Wait…Tell Me!"
+        url: "https://99percentinvisible.org/episode/wait-wait-tell-me"
+        description: "Fantastic episode about UX design around loading indicators and how it can work in the real world."
   - title: "The Ezra Klein Show"
     url: "https://www.vox.com/ezra-klein-show-podcast"
     description: "Ezra's interview on Tim Ferriss's podcast propelled me back into a love for politics and good journalism. He interviews smart people that shape today's history."
@@ -17,7 +24,7 @@ podcasts:
         url: "https://gimletmedia.com/shows/reply-all/v4he6k/130-the-snapchat-thief"
         description: "If you only listen to one episode, listen to this one. And buy a tinfoil hat."
       - title: "#117 The World's Most Expensive Free Watch"
-        url: "https://gimletmedia.com/shows/reply-all/v4he6k/130-the-snapchat-thief"
+        url: "https://gimletmedia.com/shows/reply-all/dvhe3l"
         description: "Good exploration of dropshipping and how targeting people with cheap goods but great marketing works today."
   - title: "This American Life"
     url: "https://www.thisamericanlife.org/"
