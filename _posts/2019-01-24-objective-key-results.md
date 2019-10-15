@@ -40,9 +40,9 @@ Here's an example set of Objectives and Key Results that a hotel might make at t
 
 ## Further Reading
 
-- [Measure What Matters](https://smile.amazon.com/gp/product/0525536221){:target="_blank"} by John Doerr is the deep dive into OKRs authored by the man who brought OKRs to Google in its infancy. John Doerr spoke about OKRs at [TED2018 in Vancouver](https://www.ted.com/talks/john_doerr_why_the_secret_to_success_is_setting_the_right_goals/up-next){:target="_blank"}.
+- [Measure What Matters](https://www.goodreads.com/book/show/39286958-measure-what-matters){:target="_blank"} by John Doerr is the deep dive into OKRs authored by the man who brought OKRs to Google in its infancy. John Doerr spoke about OKRs at [TED2018 in Vancouver](https://www.ted.com/talks/john_doerr_why_the_secret_to_success_is_setting_the_right_goals/up-next){:target="_blank"}.
 - Good basic OKR explainer can be found [here on Medium](https://medium.com/startup-tools/okrs-5afdc298bc28){:target="_blank"}. Also see the Google Playbook below.
-- [High Output Management](https://www.amazon.com/High-Output-Management-Andrew-Grove/dp/0679762884){:target="_blank"} by Andy Grove is a management resource that is touted by thinkers such as Marc Andreessen and Peter Drucker.
+- [High Output Management](https://www.goodreads.com/book/show/324750.High_Output_Management){:target="_blank"} by Andy Grove is a management resource that is touted by thinkers such as Marc Andreessen and Peter Drucker.
 
 ## Resources
 
