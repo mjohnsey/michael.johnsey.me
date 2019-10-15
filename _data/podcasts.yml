@@ -55,6 +55,10 @@ podcasts:
   - title: "Conan O'Brien Needs a Friend"
     url: "https://www.earwolf.com/show/conan-obrien"
     description: This is my favorite thing Conan has ever done. Great interviews and you learn way more about Conan than 20+ years of TV ever could tell you.
+    favorite_episodes:
+      - title: "#28 Bob Newhart"
+        url: "https://www.earwolf.com/episode/bob-newhart/"
+        description: "This was the podcast that sold me on Conan as a great interviewer and Bob Newhart as being the funniest 90 year old alive."
   - title: "The Weeds"
     url: "https://www.vox.com/the-weeds"
     description: |
