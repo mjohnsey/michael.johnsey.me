@@ -34,6 +34,10 @@ podcasts:
     url: "https://gimletmedia.com/shows/every-little-thing"
     description: |
       Really good podcast for people who love trivia or deep dives into random things.
+    favorite_episodes:
+      - title: "Don’t Underestimate the Flamingo (June 2017)"
+        url: "https://gimletmedia.com/shows/every-little-thing/xjheol"
+        description: "Flamingos are badasses and should be school mascots."
   - title: "Post Reports"
     url: "https://www.washingtonpost.com/podcasts/post-reports"
     description: Daily news podcast from the Washington Post, good to listen on drive home from work.
