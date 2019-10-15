@@ -8,7 +8,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.8.5"
+gem "jekyll", "~> 4.0.0"
 
 gem "jekyll-athena"
 
@@ -20,7 +20,7 @@ gem 'nokogiri', '~> 1.10.4'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-feed", "~> 0.12.1"
   gem 'jekyll-compose'
 end
 
@@ -28,3 +28,7 @@ end
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'html-proofer'
+group :development do
+  gem 'solargraph'
+  gem 'rubocop'
+end
