@@ -15,4 +15,12 @@
 
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <script src="/js/jquery-3.2.1.min.js"></script>
+  {% if site.google_analytics %}
+    {% if jekyll.environment == 'production'%}
+    {% include analytics.html %}
+    {% else %}
+    <!-- Current environment: {{jekyll.environment}} -->
+    <!-- Google analytics code would go here in production with tracking code: {{site.google_analytics}} -->
+    {% endif %}
+  {% endif %}
 </head>
