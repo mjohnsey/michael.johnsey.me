@@ -11,11 +11,11 @@ serve:
 
 .PHONY: build
 build:
-	bundle exec jekyll build
+	bundle exec jekyll build -d docs
 
 .PHONY: deploy
 deploy: build empty-bucket
-	aws s3 cp _site s3://michael.johnsey.me --recursive --profile personal
+	aws s3 cp docs s3://michael.johnsey.me --recursive --profile personal
 
 .PHONY: empty-bucket
 empty-bucket:
