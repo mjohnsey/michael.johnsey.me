@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>So Pushy</title>
+  <meta name="description" content="This site is usually a way to try open source tools and to have a link dump for my contact information. I don’t write as much as I’d like because pushing to ...">
+
+  
+  
+  <link rel="stylesheet" href="https://michael.johnsey.me/assets/style.css">
+
+  <link rel="canonical" href="https://michael.johnsey.me/2018/10/13/so-pushy.html">
+  <link rel="alternate" type="application/rss+xml" title="Michael Johnsey" href="https://michael.johnsey.me/feed.xml">
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="/js/jquery-3.2.1.min.js"></script>
+  
+    
+    <!-- Current environment: development -->
+    <!-- Google analytics code would go here in production with tracking code: UA-98280797-3 -->
+    
+  
+</head>
+
+  
+  <!-- font-smoothing is only applied on dark themes -->
+  <body class="font-smoothing">
+
+    <header class="px-2 clearfix">
+    <div class="right absolute-lg right-0 top-0">
+    <ul class="mt-2 mr-2 mr-lg-3">
+        
+        <li class="inline-block block-lg text-right ml-1 ml-lg-0">
+            <a class="italic h4 no-underline font-smoothing" href="/">
+                Home
+            </a>
+        </li>
+        
+        
+            
+      
+            
+                
+                
+        <li class="inline-block block-lg text-right ml-1 ml-lg-0">
+            <a class="italic no-underline h4 font-smoothing" href="/about.html">About</a>
+        </li>
+                
+            
+      
+            
+                
+                
+        <li class="inline-block block-lg text-right ml-1 ml-lg-0">
+            <a class="italic no-underline h4 font-smoothing" href="/favorites.html">Favorites</a>
+        </li>
+                
+            
+      
+            
+      
+            
+                
+                
+        <li class="inline-block block-lg text-right ml-1 ml-lg-0">
+            <a class="italic no-underline h4 font-smoothing" href="/linkedin.html">LinkedIn</a>
+        </li>
+                
+            
+      
+            
+                
+                
+        <li class="inline-block block-lg text-right ml-1 ml-lg-0">
+            <a class="italic no-underline h4 font-smoothing" href="/now.html">Now</a>
+        </li>
+                
+            
+      
+            
+                
+                
+        <li class="inline-block block-lg text-right ml-1 ml-lg-0">
+            <a class="italic no-underline h4 font-smoothing" href="/posts.html">Posts</a>
+        </li>
+                
+            
+      
+            
+      
+            
+      
+    </ul>
+</div>
+
+</header>
+
+
+    <div>
+      <article class="container mx-auto px-2" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="mt-4 mb-2 clearfix header-text">
+    <h1 class="h0 inline-block py-2 mt-4 header-title">So Pushy</h1>
+    
+    <p><h2 class="h1 inline-block py-0 mt-1 header-subtitle">Deploy to S3 on Travis Build</h1></p>
+    
+    <div class="clearfix mb-4 py-1">
+      <p class="h4 lh-condensed"><time datetime="2018-10-13T23:00:00-05:00" itemprop="datePublished">Oct 13, 2018</time></p>
+      <div class="col-1 sm-width-full border-top-thick">
+      </div>
+    </div>
+  </div>
+
+  <div class="prose py-3" itemprop="articleBody">
+      <p>This site is usually a way to try open source tools and to have a link dump for my contact information. I don’t write as much as I’d like because pushing to prod takes a few extra steps on a laptop with AWS S3 credentials setup.</p>
+
+<p>This website is currently a Jekyll static site and my goal for a while has been to figure out how to get the site to deploy this site on a push to <code class="highlighter-rouge">master</code>.</p>
+
+<p>Setting up a Jekyll build on Travis is as easy as getting a Ruby environment setup and running the correct commands. You can find my Travis config file here: <a href="https://github.com/mjohnsey/michael.johnsey.me/blob/95337a40c221d6e66defdfbf9f3fd3a86b447e5e/.travis.yml">https://github.com/mjohnsey/michael.johnsey.me/.travis.yml</a>.</p>
+
+<p>I generated the <code class="highlighter-rouge">deploy</code> block of the Travis config using the <a href="https://github.com/travis-ci/travis.rb">Travis CLI</a>. It steps you through all the necessary steps. The only thing I added after the fact was <code class="highlighter-rouge">skip_cleanup: true</code>.</p>
+
+<p>Run this, being sure to encrypt your secret access key:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>travis
+travis setup s3
+</code></pre></div></div>
+
+<p>It will generate the following yaml in your config:</p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">deploy</span><span class="pi">:</span>
+  <span class="na">provider</span><span class="pi">:</span> <span class="s">s3</span>
+  <span class="na">access_key_id</span><span class="pi">:</span> <span class="s">AKIAII2S3GRPXDR4R7NQ</span>
+  <span class="na">secret_access_key</span><span class="pi">:</span>
+    <span class="na">secure</span><span class="pi">:</span> <span class="s">YtODIzpufOI7w7e4mEsvpE9AtDMvkw6R69dlKMa7+s90ASkWduDlUpKketPRYVmF5VJG0xyYE9iTNK8Vw9LiS/Ad0wY3U/tSAYho1vUcbsg8wZh04BuhHCoxQo+Sq2Z2myMqHh+98I/vvvqyiee5fcWMuhDYS68zz301T8YjtvPRJ29DI1+suA2NaAZKt158BPi0mwafmBNqQcMoFFtPy78RTOtdIO9W7CDTu53Trn6SK/UGAdRVTytZU5kF/FdopLeAWoD/fQlAEiV/rc6IAhEY45cVpYsbWAZXZ1QdHr1dmEB46H/oqx80yL+4T1yb19lo80Trvb/HhSUVYfdil4ld3/taLXYFXPs+H9w30VxATGHdUxrKt49z1eMxrefmQxTZ0kAW1nLmqfidTl0AlN8zLi65QlQi1kIH2Jt7p8b5XIHN2UWM3/W0tNOChNj/qCLl2n8BqMr0NhNdtZalI5avFp3Cs7lKo5qLKC9IQg3xZYIJ+WP7SbsCLJSrDIje66RrP3shtDM4+UCzoxYIX6G1mm1gYODcQ+E/vHUDTqmG8oaCZ/FPpbppJb6WL39rvEGPZtb6YUFjwdZGznhygfnFwEcRnP/fxmMqAeZO6ck2N7yyIED8EH/zcTEREoyzRonK4K+EulilgvNE0WESE+3lRRZTEW9ujUXYjfD9p1Y=</span>
+  <span class="na">bucket</span><span class="pi">:</span> <span class="s">michael.johnsey.me</span>
+  <span class="na">local-dir</span><span class="pi">:</span> <span class="s">_site</span>
+  <span class="na">acl</span><span class="pi">:</span> <span class="s">public_read</span>
+  <span class="na">on</span><span class="pi">:</span>
+    <span class="na">repo</span><span class="pi">:</span> <span class="s">mjohnsey/michael.johnsey.me</span>
+  <span class="na">skip_cleanup</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+
+<p>Setting up the S3 permissions in AWS IAM was the biggest hiccup I encountered but luckily this <a href="https://medium.com/@michal.frystacky/static-site-github-to-s3-770953a90f67">blog post from Michal Frystacky</a> had an example of the permissions necessary to make it work. I think my problem originally was I did not give ACL permissions to the AWS user I setup for Travis.</p>
+
+<p>Now on every push to master it will deploy the <code class="highlighter-rouge">_site</code> folder to the S3 bucket. This should open up my ability to write more since I can easily do it from Github’s editor. The only thing I have left that I might go back and add later is an invalidation script to clear out my CloudFront after a deploy.</p>
+
+  </div>
+</article>
+
+<div class="container mx-auto px-2 py-2 clearfix">
+  
+<section>
+    <h3>Revisions:</h3>
+    <ul>
+        
+        <li>
+            <div class="post-meta">
+                [<span class="commitish"><a href="git@github.com:mjohnsey/michael.johnsey.me/commit/c2a5fc7" target="_blank">c2a5fc7</a></span>]
+                13 Oct 2018 -
+                <span class="post-author">Michael Johnsey</span> - Add a blog post on how to deploy using s3 and travis (#9)
+            </div>
+        </li>
+        
+    </ul>
+</section>
+
+
+</div>
+
+<div class="container mx-auto px-2 py-2 clearfix">
+  <!-- Use if you want to show previous and next for all posts. -->
+
+
+
+  
+  <div class="col-4 sm-width-full left mt-3">
+    <a class="no-underline-hover py-1 block" href="https://michael.johnsey.me/2019/01/24/objective-key-results.html">
+      <span class="h5 bold">Next</span>
+      <p class="bold h3 link-primary mb-1">Objectives and Key Results</p>
+      <p>Objectives and Key Results (OKRs) are a simple concept that does heavy lifting, all the best concepts share this commonality....</p>
+    </a>
+  </div>
+
+
+</div>
+
+    </div>
+
+    <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
+  <div class="border-top-thick">
+    <p class="col-8 sm-width-full left py-2 mb-0"><a class="text-accent" href="https://github.com/mjohnsey/michael.johnsey.me">© Michael Johnsey 2019</a></p>
+    <ul class="list-reset right clearfix sm-width-full py-2 mb-2 mb-lg-0">
+      <li class="inline-block">
+        <a class="github-button" href="https://github.com/mjohnsey" aria-label="Follow @mjohnsey on GitHub">Follow @mjohnsey</a>
+      </li>
+      <li class="inline-block">
+          <a href="https://twitter.com/mcjohnsey" class="twitter-follow-button" data-lang="en" data-show-count="false">Follow @mcjohnsey</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </li>
+    </ul>
+  </div>
+</div>
+
+
+  </body>
+
+</html>
