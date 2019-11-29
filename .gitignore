@@ -2,7 +2,6 @@
 # Edit at https://www.gitignore.io/?templates=jekyll
 
 ### Jekyll ###
-_site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
@@ -10,3 +9,6 @@ _site/
 # End of https://www.gitignore.io/api/jekyll
 !*/.gitkeep
 .vscode
+
+vendor
+style.css.map
