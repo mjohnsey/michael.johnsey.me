@@ -12,6 +12,9 @@ jobs:
         uses: actions/setup-ruby@v1
         with:
           ruby-version: 2.5.x
+      - name: Make sure bundler is there
+        run: |
+            gem install bundler
       - name: bundle-cache
         uses: actions/cache@v1
         with:
@@ -21,7 +24,6 @@ jobs:
               ${{ runner.os }}-gem-
       - name: bundle install using cache
         run: |
-            gem install bundler
             bundle config path vendor/bundle  
             bundle install --jobs 4 --retry 3
       - name: Run cibuild
