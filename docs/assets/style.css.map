@@ -3,11 +3,11 @@
 	"file": "style.css",
 	"sources": [
 		"style.scss",
-		"../../../../../.rvm/gems/ruby-2.5.7@michael.johnsey.me/gems/jekyll-athena-0.0.2/_sass/_theme-light.scss",
-		"../../../../../.rvm/gems/ruby-2.5.7@michael.johnsey.me/gems/jekyll-athena-0.0.2/_sass/_variables.scss",
-		"../../../../../.rvm/gems/ruby-2.5.7@michael.johnsey.me/gems/jekyll-athena-0.0.2/_sass/_base.scss",
-		"../../../../../.rvm/gems/ruby-2.5.7@michael.johnsey.me/gems/jekyll-athena-0.0.2/_sass/_components.scss",
-		"../../../../../.rvm/gems/ruby-2.5.7@michael.johnsey.me/gems/jekyll-athena-0.0.2/_sass/_utilities.scss"
+		"vendor/bundle/gems/jekyll-athena-0.0.2/_sass/_theme-light.scss",
+		"vendor/bundle/gems/jekyll-athena-0.0.2/_sass/_variables.scss",
+		"vendor/bundle/gems/jekyll-athena-0.0.2/_sass/_base.scss",
+		"vendor/bundle/gems/jekyll-athena-0.0.2/_sass/_components.scss",
+		"vendor/bundle/gems/jekyll-athena-0.0.2/_sass/_utilities.scss"
 	],
 	"sourcesContent": [
 		"@charset \"utf-8\";\n\n// Import partials from `sass_dir` and set theme here\n@import\n        \"theme-light.scss\"\n        // \"theme-system.scss\"\n;\n",
