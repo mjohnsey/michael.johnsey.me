@@ -12,3 +12,6 @@
 
 vendor
 style.css.map
+node_modules
+.cache
+public

@@ -2,7 +2,7 @@
 title: "Objectives and Key Results"
 subtitle: "Short introduction to OKRs"
 layout: post
-date: 2019-01-24 22:00
+date: 2019-01-24
 ---
 
 Objectives and Key Results (OKRs) are a simple concept that does heavy lifting, all the best concepts share this commonality.
