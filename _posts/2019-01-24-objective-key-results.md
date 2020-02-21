@@ -35,8 +35,8 @@ Here's an example set of Objectives and Key Results that a hotel might make at t
 
 ### An Example Using the Empire
 
-<iframe src="//www.slideshare.net/slideshow/embed_code/key/aHOONTU9oHWDM" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
-[OKRs, Exaplained with "Star Wars"](https://www.slideshare.net/AndrewCedotal/okrs-explained-with-star-wars){:target="_blank"} from [Andrew Cedotal](https://www.slideshare.net/AndrewCedotal){:target="_blank"}
+[OKRs, Exaplained with "Star Wars"](https://web.archive.org/web/20190516043231/https://www.slideshare.net/AndrewCedotal/okrs-explained-with-star-wars){:target="_blank"} from [Andrew Cedotal](https://www.slideshare.net/AndrewCedotal){:target="_blank"}
+_Note: It appears this was taken offline, the above link will take you to archive.com but I can't guarantee the cache will work forever._
 
 ## Further Reading
 
