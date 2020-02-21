@@ -31,6 +31,10 @@ module Jekyll
         logs = Executor.sh('git', 'log', '--pretty=%h|%ci|%an|%s', '--max-count=' + max_count.to_s, relative_path_from_git_dir)
         remote = Executor.sh('git', 'config' , '--get', 'remote.origin.url')
         remote = remote.gsub(/.git$/, '')
+        is_ssh_match = /^git@github.com\:(.*)$/.match(remote)
+        if is_ssh_match
+          remote = "https://github.com/#{is_ssh_match[1]}"
+        end
         logs.lines.map do |line|
           parts = line.split('|')
           hash = parts[0]
