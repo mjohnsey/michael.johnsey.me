@@ -7,7 +7,7 @@ setup:
 
 .PHONY: serve
 serve:
-	bundle exec jekyll serve
+	bundle exec jekyll serve -d _site
 
 .PHONY: build
 build:
