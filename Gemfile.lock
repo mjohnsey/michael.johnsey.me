@@ -61,7 +61,7 @@ GEM
     maruku (0.7.3)
     mercenary (0.3.6)
     mini_portile2 (2.4.0)
-    nokogiri (1.10.5)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     parallel (1.19.1)
     parser (2.6.5.0)
@@ -118,7 +118,7 @@ DEPENDENCIES
   jekyll-athena
   jekyll-compose
   jekyll-feed (~> 0.12.1)
-  nokogiri (~> 1.10.4)
+  nokogiri (~> 1.10.8)
   rubocop
   solargraph
   tzinfo-data
