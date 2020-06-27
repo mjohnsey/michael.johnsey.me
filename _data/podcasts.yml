@@ -83,7 +83,7 @@ podcasts:
       Malcolm Gladwell's podcast that is researched and produced more like a NYT Bestseller.
     favorite_episodes:
       - title: "S3 E10: Analysis, Parapraxis, Elvis"
-        url: "https://revisionisthistory.com/episodes/30-analysis-parapraxis-elvis"
+        url: "http://revisionisthistory.com/episodes/30-analysis-parapraxis-elvis"
         description: "Episode that explores the most famous Memphian's Freudian slips and overall idiosyncrasies with the help of Jack White."
   - title: Criminal
     url: "https://thisiscriminal.com"
