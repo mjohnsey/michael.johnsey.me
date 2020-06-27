@@ -22,8 +22,8 @@ jobs:
         with:
           enable_cache: true
 
-      - name: Run cibuild
-        run: ./scripts/cibuild
+      # - name: Run cibuild
+      #   run: ./scripts/cibuild
 
       - name: Commit any changes done here
         uses: stefanzweifel/git-auto-commit-action@v4
