@@ -8,4 +8,4 @@ The site's theme is jekyll-athena.
 
 Favicon was generated using [Paul Ferrett's Generator](https://paulferrett.com/fontawesome-favicon).
 
-Revision tracking provided by [stigok/jekyll-post-revision](https://github.com/stigok/jekyll-post-revision).
+Revision tracking provided by [stigok/jekyll-post-revision](https://github.com/stigok/jekyll-post-revision)
