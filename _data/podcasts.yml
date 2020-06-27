@@ -38,12 +38,15 @@ podcasts:
       - title: "Don’t Underestimate the Flamingo (June 2017)"
         url: "https://gimletmedia.com/shows/every-little-thing/xjheol"
         description: "Flamingos are badasses and should be school mascots."
+      - title: "F-ck Yeah: Can Cursing Make You Stronger? (June 2019)"
+        url: "https://gimletmedia.com/shows/every-little-thing/brh83m"
+        description: "Funny episode that delves into the science of cursing and if it helps deal with pain."
   - title: "Post Reports"
     url: "https://www.washingtonpost.com/podcasts/post-reports"
-    description: Daily news podcast from the Washington Post, good to listen on drive home from work.
-  - title: "Up First"
-    url: "https://www.npr.org/podcasts/510318/up-first"
-    description: NPR's abbreviated morning news podcast, first thing I listen to in the morning.
+    description: Great daily evening news podcast from the Washington Post.
+  - title: "The NPR Politics Podcast"
+    url: "https://www.npr.org/podcasts/510310/npr-politics-podcast"
+    description: NPR's evening political news podcast, first thing I listen to when I get off work.
   - title: "Lovett or Leave It"
     url: "https://crooked.com/podcast-series/lovett-or-leave-it"
     description: My favorite political comedy podcast.
@@ -73,4 +76,20 @@ podcasts:
       This show is a downer. But I think it's an important look at the direction a country could go down that is more realistic than any dystopian show/movie you've ever seen.
   - title: "Crimetown"
     url: "https://www.crimetownshow.com"
-    description: Really good show about the not-so-distant past of organized crime in America.
+    description: Good show about the not-so-distant past of organized crime in America.
+  - title: "Revisionist History"
+    url: "http://revisionisthistory.com"
+    description: |
+      Malcolm Gladwell's podcast that is researched and produced more like a NYT Bestseller.
+    favorite_episodes:
+      - title: "S3 E10: Analysis, Parapraxis, Elvis"
+        url: "https://revisionisthistory.com/episodes/30-analysis-parapraxis-elvis"
+        description: "Episode that explores the most famous Memphian's Freudian slips and overall idiosyncrasies with the help of Jack White."
+  - title: Criminal
+    url: "https://thisiscriminal.com"
+    description: |
+      True crime podcast that focuses on subjects other than serial killers.
+    favorite_episodes:
+      - title: "#15 He's Neutral (January 2015)"
+        url: "https://thisiscriminal.com/episode-15-hes-neutral"
+        description: "Episode about cleaning up crime in a neighborhood by bringing Buddha to an Oakland street corner."
