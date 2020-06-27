@@ -12,7 +12,6 @@ gem 'nokogiri', '~> 1.10.9'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12.1"
   gem 'jekyll-compose'
 end
 
