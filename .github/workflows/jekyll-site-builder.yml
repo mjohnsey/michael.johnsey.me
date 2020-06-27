@@ -1,35 +1,37 @@
-name: Generate Site
+name: Build and deploy jekyll site
+
 on:
-  pull_request:
+  push:
     branches:
       - master
+    
 jobs:
-  build-jekyll-site:
-    runs-on: ubuntu-latest
+  jekyll:
+    runs-on: ubuntu-18.04
     steps:
-      - uses: actions/checkout@v1
-      - name: Set up Ruby 2.5.x
-        uses: actions/setup-ruby@v1
+      - name: 📂 setup
+        uses: actions/checkout@v2
+
+      - name: 💎 setup ruby
+        uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.5.x
-      - name: bundle-cache
-        uses: actions/cache@v1
+
+      - name: 🔨 install dependencies & build site
+        uses: limjh16/jekyll-action-ts@v2
         with:
-            path: vendor/bundle
-            key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
-            restore-keys: |
-              ${{ runner.os }}-gem-
-      - name: bundle install using cache
-        run: |
-            gem install bundler
-            bundle config path vendor/bundle
-            bundle install --jobs 4 --retry 3
+          enable_cache: true
+
       - name: Run cibuild
         run: ./scripts/cibuild
-      - name: Commit changes to docs dir
-        uses: stefanzweifel/git-auto-commit-action@v2.3.0
+
+      - name: Commit any changes done here
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Apply automatic changes
-          branch: ${{ github.head_ref }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          commit_message: Apply changes from build
+
+      - name: 🚀 deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
