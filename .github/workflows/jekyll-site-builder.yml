@@ -15,7 +15,7 @@ jobs:
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.5.x
+          ruby-version: 2.5.5
 
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
