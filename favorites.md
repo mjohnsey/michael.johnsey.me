@@ -10,7 +10,7 @@ I listen to lots of podcasts but these are some of my favorites.
 
 *Pro-tip: Listen to all podcasts at least 1.75x speed.*
 
-{% assign fav_podcasts = site.data.podcasts.podcasts | sort:"title" %}
+{% assign fav_podcasts = site.data.podcasts.podcasts | where: "archive", "false" | sort:"title" %}
 {% for podcast in fav_podcasts%}
 ### [{{podcast.title}}]({{podcast.url}}){:target="_blank"}
 

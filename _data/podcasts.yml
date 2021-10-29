@@ -2,6 +2,7 @@ podcasts:
   - title: "The Tim Ferriss Show"
     url: "https://tim.blog/podcast"
     description: This was the podcast that got me into podcasts. I'm a long time Tim fan, and his collection of interviews will likely be what he is most known for over his books.
+    archive: false
   - title: "99% Invisible"
     url: "https://99percentinvisible.org"
     description: Great podcast on design in your everyday life. New episodes are always pushed to the front of my playlist.
@@ -12,11 +13,14 @@ podcasts:
       - title: "#369 Wait Wait…Tell Me!"
         url: "https://99percentinvisible.org/episode/wait-wait-tell-me"
         description: "Fantastic episode about UX design around loading indicators and how it can work in the real world."
+    archive: false
   - title: "The Ezra Klein Show"
-    url: "https://www.vox.com/ezra-klein-show-podcast"
-    description: "Ezra's interview on Tim Ferriss's podcast propelled me back into a love for politics and good journalism. He interviews smart people that shape today's history."
+    url: "https://www.nytimes.com/column/ezra-klein-podcast"
+    description: "Ezra's interview on Tim Ferriss's podcast propelled me back into a renewed love for politics and good journalism. He interviews smart people that shape history every day."
+    archive: false
   - title: "Reply All"
     url: "https://gimletmedia.com/shows/reply-all"
+    archive: false
     description: |
       Podcast that explores the weird world of the internet.
     favorite_episodes:
@@ -28,10 +32,12 @@ podcasts:
         description: "Good exploration of dropshipping and how targeting people with cheap goods but great marketing works today."
   - title: "This American Life"
     url: "https://www.thisamericanlife.org/"
+    archive: false
     description: |
       This podcast is responsible for most people falling in love with podcasts (even if it's really a radio show).
   - title: "Every Little Thing"
     url: "https://gimletmedia.com/shows/every-little-thing"
+    archive: false
     description: |
       Really good podcast for people who love trivia or deep dives into random things.
     favorite_episodes:
@@ -44,22 +50,29 @@ podcasts:
   - title: "Post Reports"
     url: "https://www.washingtonpost.com/podcasts/post-reports"
     description: Great daily evening news podcast from the Washington Post.
+    archive: true
   - title: "The NPR Politics Podcast"
     url: "https://www.npr.org/podcasts/510310/npr-politics-podcast"
     description: NPR's evening political news podcast, first thing I listen to when I get off work.
+    archive: true
   - title: "Lovett or Leave It"
+    archive: false
     url: "https://crooked.com/podcast-series/lovett-or-leave-it"
     description: My favorite political comedy podcast.
   - title: "Pod Save America"
+    archive: false
     url: "https://crooked.com/podcast-series/pod-save-america"
     description: Crooked Media's flagship is must listen for keeping you informed on not just news but what to do about what you hear.
   - title: "Armchair Expert"
+    archive: false
     url: "https://armchairexpertpod.com"
     description: Favorite pop-culture interview podcast. Dax and Monica are awesome.
   - title: "Today Explained"
     url: "https://www.vox.com/today-explained"
     description: Daily news podcast from Vox doing a deep dive into one story per day. Good podcast to listen to while cooking dinner.
+    archive: true
   - title: "Conan O'Brien Needs a Friend"
+    archive: false
     url: "https://www.earwolf.com/show/conan-obrien"
     description: This is my favorite thing Conan has ever done. Great interviews and you learn way more about Conan than 20+ years of TV ever could tell you.
     favorite_episodes:
@@ -70,14 +83,18 @@ podcasts:
     url: "https://www.vox.com/the-weeds"
     description: |
       As apparent from its title, this show digs deep into news stories and looks at the public policy that underlies day-to-day headlines.
+    archive: true
   - title: "It Could Happen Here"
     url: "https://www.itcouldhappenherepod.com/"
+    archive: true
     description: |
       This show is a downer. But I think it's an important look at the direction a country could go down that is more realistic than any dystopian show/movie you've ever seen.
   - title: "Crimetown"
     url: "https://www.crimetownshow.com"
     description: Good show about the not-so-distant past of organized crime in America.
+    archive: true
   - title: "Revisionist History"
+    archive: false
     url: "http://revisionisthistory.com"
     description: |
       Malcolm Gladwell's podcast that is researched and produced more like a NYT Bestseller.
@@ -89,6 +106,7 @@ podcasts:
     url: "https://thisiscriminal.com"
     description: |
       True crime podcast that focuses on subjects other than serial killers.
+    archive: true
     favorite_episodes:
       - title: "#15 He's Neutral (January 2015)"
         url: "https://thisiscriminal.com/episode-15-hes-neutral"
