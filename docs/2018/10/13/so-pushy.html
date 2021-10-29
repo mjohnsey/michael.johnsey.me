@@ -108,11 +108,11 @@
 
 <p>This site is usually a way to try open source tools and to have a link dump for my contact information. I don’t write as much as I’d like because pushing to prod takes a few extra steps on a laptop with AWS S3 credentials setup.</p>
 
-<p>This website is currently a Jekyll static site and my goal for a while has been to figure out how to get the site to deploy this site on a push to <code class="highlighter-rouge">master</code>.</p>
+<p>This website is currently a Jekyll static site and my goal for a while has been to figure out how to get the site to deploy this site on a push to <code class="language-plaintext highlighter-rouge">master</code>.</p>
 
 <p>Setting up a Jekyll build on Travis is as easy as getting a Ruby environment setup and running the correct commands. You can find my Travis config file here: <a href="https://github.com/mjohnsey/michael.johnsey.me/blob/95337a40c221d6e66defdfbf9f3fd3a86b447e5e/.travis.yml">https://github.com/mjohnsey/michael.johnsey.me/.travis.yml</a>.</p>
 
-<p>I generated the <code class="highlighter-rouge">deploy</code> block of the Travis config using the <a href="https://github.com/travis-ci/travis.rb">Travis CLI</a>. It steps you through all the necessary steps. The only thing I added after the fact was <code class="highlighter-rouge">skip_cleanup: true</code>.</p>
+<p>I generated the <code class="language-plaintext highlighter-rouge">deploy</code> block of the Travis config using the <a href="https://github.com/travis-ci/travis.rb">Travis CLI</a>. It steps you through all the necessary steps. The only thing I added after the fact was <code class="language-plaintext highlighter-rouge">skip_cleanup: true</code>.</p>
 
 <p>Run this, being sure to encrypt your secret access key:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem <span class="nb">install </span>travis
@@ -135,7 +135,7 @@ travis setup s3
 
 <p>Setting up the S3 permissions in AWS IAM was the biggest hiccup I encountered but luckily this <a href="https://medium.com/@michal.frystacky/static-site-github-to-s3-770953a90f67">blog post from Michal Frystacky</a> had an example of the permissions necessary to make it work. I think my problem originally was I did not give ACL permissions to the AWS user I setup for Travis.</p>
 
-<p>Now on every push to master it will deploy the <code class="highlighter-rouge">_site</code> folder to the S3 bucket. This should open up my ability to write more since I can easily do it from Github’s editor. The only thing I have left that I might go back and add later is an invalidation script to clear out my CloudFront after a deploy.</p>
+<p>Now on every push to master it will deploy the <code class="language-plaintext highlighter-rouge">_site</code> folder to the S3 bucket. This should open up my ability to write more since I can easily do it from Github’s editor. The only thing I have left that I might go back and add later is an invalidation script to clear out my CloudFront after a deploy.</p>
 
   </div>
 </article>
@@ -199,7 +199,7 @@ travis setup s3
 
     <div class="container mx-auto clearfix mt-2 mt-lg-4 px-2">
   <div class="border-top-thick">
-    <p class="col-8 sm-width-full left py-2 mb-0"><a class="text-accent" href="https://github.com/mjohnsey/michael.johnsey.me">© Michael Johnsey 2020</a></p>
+    <p class="col-8 sm-width-full left py-2 mb-0"><a class="text-accent" href="https://github.com/mjohnsey/michael.johnsey.me">© Michael Johnsey 2021</a></p>
     <ul class="list-reset right clearfix sm-width-full py-2 mb-2 mb-lg-0">
       <li class="inline-block">
         <a class="github-button" href="https://github.com/mjohnsey" aria-label="Follow @mjohnsey on GitHub">Follow @mjohnsey</a>
