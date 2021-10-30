@@ -22,7 +22,7 @@ url: "https://michael.johnsey.me" # the base hostname & protocol for your site, 
 twitter_username: mcjohnsey
 github_username:  mjohnsey
 github_repo: michael.johnsey.me
-google_analytics: UA-98280797-3
+cloudflare_analytics: 2c5b481adf7e496c94b03ad43b93012f
 
 # Build settings
 markdown: kramdown
