@@ -1,0 +1,39 @@
+baseURL = 'https://michael.johnsey.me'
+languageCode = 'en-us'
+title = 'Michael Johnsey'
+copyright = "Michael"
+
+theme = "hugo-blog-awesome"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params.author]
+avatar = "gravatar.png"
+intro = "Michael Johnsey"
+name = "Michael Johnsey"
+description = "Technical Lead working remotely at Change Research from Memphis, TN."
+
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/mjohnsey"
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://linkedin.com/in/mjohnsey"
+[[params.socialIcons]]
+name = "bluesky"
+url = "https://bsky.app/profile/michael.johnsey.me"
+[[params.socialIcons]]
+name = "Rss"
+url = "index.xml"
+
+[[menu.main]]
+pageRef = "/about"
+name = "About"
+url = "/about"
+weight = 10
+[[menu.main]]
+pageRef = "/posts"
+name = "Posts"
+url = "/posts"
+weight = 20
