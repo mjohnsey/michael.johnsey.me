@@ -1,0 +1,43 @@
+---
+import "../styles/global.css";
+import Footer from "../components/footer";
+import Header from "../components/header";
+
+// Get the current path automatically from Astro.url
+const currentPath = Astro.url.pathname;
+
+interface Props {
+  title?: string;
+  hideHeaderOnPrint?: boolean;
+  hideFooterOnPrint?: boolean;
+}
+
+const {
+  title = "Michael Johnsey",
+  hideHeaderOnPrint = false,
+  hideFooterOnPrint = false,
+} = Astro.props;
+---
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body class="flex flex-col min-h-screen w-10/12 mx-auto">
+    <div>
+      <Header
+        title={title}
+        currentPath={currentPath}
+        hideOnPrint={hideHeaderOnPrint}
+      />
+    </div>
+    <main>
+      <slot />
+    </main>
+    <div>
+      <Footer hideOnPrint={hideFooterOnPrint} />
+    </div>
+  </body>
+</html>

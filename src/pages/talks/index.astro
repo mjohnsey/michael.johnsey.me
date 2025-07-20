@@ -1,0 +1,34 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+import { formatDate } from "../../lib/date-helpers";
+
+const talks = (await getCollection("talks")).sort((a, b) => {
+  return new Date(b.data.talkGivenDate) - new Date(a.data.talkGivenDate);
+});
+---
+
+<MainLayout>
+  <h1 class="text-2xl font-bold mb-4">Talks Given</h1>
+
+  <ul class="space-y-4">
+    {
+      talks.map((talk) => (
+        <li>
+          <a
+            href={`/talks/${talk.slug}/`}
+            class="text-xl text-blue-600 hover:underline"
+          >
+            {talk.data.title}
+          </a>
+          <p class="text-gray-700 text-sm">{talk.data.description}</p>
+
+          <p class="text-gray-500 text-xs flex items-center space-x-2">
+            <span>{formatDate(new Date(talk.data.talkGivenDate))}</span>
+            <span>{talk.data.meetupGroup}</span>
+          </p>
+        </li>
+      ))
+    }
+  </ul>
+</MainLayout>

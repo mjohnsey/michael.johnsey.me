@@ -1,8 +1,0 @@
-<ul>
-    {% assign recentPages = site.pages | sort: 'last_modified_at' | reverse %}
-    {% for page in recentPages limit:10 %}
-    <li>
-        <a href="{{ page.url }}">{{ page.title }}</a>
-    </li>
-    {% endfor %}
-</ul>

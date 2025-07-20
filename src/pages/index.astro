@@ -1,0 +1,72 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import { getCollection } from "astro:content";
+import { formatDate } from "../lib/date-helpers";
+
+const posts = (await getCollection("posts"))
+  .sort((a, b) => b.data.pubDate - a.data.pubDate)
+  .slice(0, 3); // grab the 3 most recent posts
+
+const talks = (await getCollection("talks"))
+  .sort((a, b) => b.data.talkGivenDate - a.data.talkGivenDate)
+  .slice(0, 3); // grab the 3 most recent talks
+---
+
+<MainLayout>
+  <div>
+    <p>
+      Hello, my name is Michael Johnsey. I'm the Technical Lead at <a
+        href="https://www.changeresearch.com"
+        class="underline">Change Research</a
+      >. Formerly I was at <a href="https://www.refed.org" class="underline"
+        >ReFED</a
+      >,
+      <a href="https://www.revspringinc.com" class="underline">RevSpring</a>,
+      and <a href="https://www.ookla.com" class="underline">Ookla</a>.
+    </p>
+
+    <p class="mt-4">
+      I also am a co-organizer for <a
+        href="https://devmemphis.org"
+        class="underline">DevMemphis</a
+      >.
+    </p>
+  </div>
+
+  <hr class="my-4 w-1/4" />
+
+  <div>
+    <h2 class="text-2xl font-bold mb-4">Recent Posts</h2>
+    <ul class="space-y-4">
+      {
+        posts.map((post) => (
+          <li>
+            <a href={`/posts/${post.slug}/`} class="text-lg font-semibold">
+              {post.data.title}
+            </a>
+            <p>{formatDate(post.data.pubDate)}</p>
+            <p class="text-gray-600 text-sm">{post.data.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+  <hr class="my-4 w-1/4" />
+  <div>
+    <h2 class="text-2xl font-bold mb-4">Recent Talks Given</h2>
+    <ul class="space-y-4">
+      {
+        talks.map((talk) => (
+          <li>
+            <a href={`/talks/${talk.slug}/`} class="text-lg font-semibold">
+              {talk.data.title}
+            </a>
+            <p>{formatDate(talk.data.talkGivenDate)}</p>
+            <p class="text-gray-600 text-sm">{talk.data.description}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</MainLayout>
