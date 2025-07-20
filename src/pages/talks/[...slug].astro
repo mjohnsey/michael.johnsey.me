@@ -1,0 +1,35 @@
+---
+import "../../styles/global.css";
+import { getCollection, getEntry } from "astro:content";
+import { AstroError } from "astro/errors";
+
+import MainLayout from "../../layouts/MainLayout.astro";
+
+// 🔁 This tells Astro what slugs to render
+export async function getStaticPaths() {
+  const talks = await getCollection("talks");
+
+  return talks.map((talk) => ({
+    params: { slug: talk.slug },
+  }));
+}
+
+// 👇 Get the slug from the URL
+const { slug } = Astro.params;
+const talk = await getEntry("talks", slug);
+
+if (!talk) throw new AstroError("Talk not found");
+
+const { Content } = await talk.render();
+---
+
+<MainLayout>
+  <h1 class="text-2xl font-bold mb-4">{talk.data.title}</h1>
+  <p class="text-gray-500 mb-4">
+    <em>{talk.data.talkGivenDate.toDateString()}</em>
+  </p>
+
+  <article class="prose max-w-none">
+    <Content />
+  </article>
+</MainLayout>

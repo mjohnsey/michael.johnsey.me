@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+body {
+  @apply text-gray-900 bg-amber-50 antialiased;
+  font-family: Athelas, Palatino, Georgia, serif;
+}
+
+/* This assumes the Typography plugin generated these variables already */
+.prose h2 {
+  margin-top: 1rem; /* adjust as desired */
+  margin-bottom: 0.5rem;
+}
