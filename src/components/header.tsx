@@ -14,7 +14,7 @@ const nav = [
   },
   { name: "Resume", href: "/resume", target: "_self", rel: "" },
   { name: "Posts", href: "/posts", target: "_self", rel: "" },
-  { name: "Talks Given", href: "/talks", target: "_self", rel: "" },
+  { name: "Talks", href: "/talks", target: "_self", rel: "" },
 ];
 
 export default function Header({
