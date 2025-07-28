@@ -187,7 +187,11 @@ const education = [
 ];
 ---
 
-<MainLayout hideHeaderOnPrint hideFooterOnPrint title="Michael Johnsey Resume">
+<MainLayout
+    hideHeaderOnPrint
+    hideFooterOnPrint
+    browserTitle="Michael Johnsey Resume"
+>
     <div class="print:mx-2 print:text-sm">
         {/* Header for printing*/}
         <header class="hidden print:block text-center print:mb-2">
@@ -196,7 +200,9 @@ const education = [
         </header>
 
         {/* Executive Summary */}
-        <section class="mb-4 print:mb-2 print:leading-tight">
+        <section
+            class="mb-4 print:mb-2 print:leading-tight text-center print:text-start"
+        >
             <p>{executiveSummary}</p>
         </section>
 
@@ -263,7 +269,7 @@ const education = [
                                 ))}
                             </ul>
                         </div>
-                        <p class="mb-4 print:mb-1 print:leading-tight">
+                        <p class="mb-4 print:mb-2 print:leading-tight">
                             {job.description}
                         </p>
                         <ul class="list-disc list-outside pl-4 space-y-2 print:pl-2 print:space-y-0.5">
@@ -289,7 +295,7 @@ const education = [
             {
                 communityHistory.map((entry) => (
                     <div class="mb-4" key={entry.title}>
-                        <h3 class="text-base font-semibold underline print:text-sm print:no-underline">
+                        <h3 class="text-lg font-semibold underline print:text-base print:no-underline">
                             <a
                                 href={entry.homepage}
                                 target="_blank"
@@ -298,13 +304,15 @@ const education = [
                                 {entry.title}
                             </a>
                         </h3>
-                        <ul class="mb-2 text-sm">
+                        <ul class="mb-2 text-base print:space-y-0.5">
                             <li class="grid grid-cols-2">
                                 <span class="italic">{entry.role}</span>
                                 <span class="tabular-nums">{entry.date}</span>
                             </li>
                         </ul>
-                        <p class="text-sm">{entry.description}</p>
+                        <p class="text-base print:text-sm">
+                            {entry.description}
+                        </p>
                     </div>
                 ))
             }
@@ -323,7 +331,7 @@ const education = [
                             .toLowerCase()
                             .replace(/\s+/g, "-")}
                     >
-                        <h3 class="text-base font-semibold underline print:text-sm print:no-underline">
+                        <h3 class="text-lg font-semibold underline print:text-base print:no-underline">
                             <a
                                 href={entry.homepage}
                                 target="_blank"
@@ -332,8 +340,8 @@ const education = [
                                 {entry.institution}
                             </a>
                         </h3>
-                        <p class="text-sm">{entry.degree}</p>
-                        <p class="text-sm">{entry.date}</p>
+                        <p class="text-base print:text-sm">{entry.degree}</p>
+                        <p class="text-base print:text-sm">{entry.date}</p>
                     </div>
                 ))
             }

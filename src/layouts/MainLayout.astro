@@ -10,12 +10,14 @@ interface Props {
   title?: string;
   hideHeaderOnPrint?: boolean;
   hideFooterOnPrint?: boolean;
+  browserTitle?: string;
 }
 
 const {
   title = "Michael Johnsey",
   hideHeaderOnPrint = false,
   hideFooterOnPrint = false,
+  browserTitle = "Michael Johnsey",
 } = Astro.props;
 ---
 
@@ -23,7 +25,7 @@ const {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
+    <title>{browserTitle}</title>
   </head>
   <body class="flex flex-col min-h-screen w-10/12 mx-auto">
     <div>
