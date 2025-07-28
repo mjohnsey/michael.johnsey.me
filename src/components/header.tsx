@@ -12,7 +12,7 @@ const nav = [
     target: "_blank",
     rel: "noopener noreferrer",
   },
-  // { name: "Resume", href: "/resume", target: "_self", rel: "" },
+  { name: "Resume", href: "/resume", target: "_self", rel: "" },
   { name: "Posts", href: "/posts", target: "_self", rel: "" },
   { name: "Talks Given", href: "/talks", target: "_self", rel: "" },
 ];
@@ -30,9 +30,8 @@ export default function Header({
 }) {
   return (
     <header
-      class={`text-center mb-4 ${className} ${
-        hideOnPrint ? "print:hidden" : ""
-      }`}
+      class={`text-center mb-4 ${className} ${hideOnPrint ? "print:hidden" : ""
+        }`}
     >
       <h1 class="text-4xl font-bold mt-4">{title}</h1>
       <nav>
@@ -41,9 +40,8 @@ export default function Header({
             <li key={item.name}>
               <a
                 href={item.href}
-                class={`hover:underline ${
-                  currentPath === item.href ? "font-bold" : ""
-                }`}
+                class={`hover:underline ${currentPath === item.href ? "font-bold" : ""
+                  }`}
                 target={item.target}
                 rel={item.rel}
               >

@@ -21,12 +21,27 @@ const talk = await getEntry("talks", slug);
 if (!talk) throw new AstroError("Talk not found");
 
 const { Content } = await talk.render();
+const meetupGroup = talk.data.meetupGroup;
+const meetupUrl = talk.data.url;
 ---
 
 <MainLayout>
   <h1 class="text-2xl font-bold mb-4">{talk.data.title}</h1>
-  <p class="text-gray-500 mb-4">
-    <em>{talk.data.talkGivenDate.toDateString()}</em>
+  <p class="text-gray-500 mb-4 italic">
+    {talk.data.talkGivenDate.toDateString()} - {
+      meetupUrl ? (
+        <a
+          class="underline cursor-pointer"
+          href={meetupUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {meetupGroup}
+        </a>
+      ) : (
+        meetupGroup
+      )
+    }
   </p>
 
   <article class="prose max-w-none">

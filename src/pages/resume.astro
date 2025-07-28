@@ -1,0 +1,342 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import "../styles/global.css";
+import Footer from "../components/footer";
+import Header from "../components/header";
+
+const executiveSummary =
+    "Engineering leader with a decade of experience architecting scalable systems, growing high-performing teams, and setting long-term technical direction. Proven ability to align product, infrastructure, and data strategy to business outcomes especially in mission-driven and AI-forward organizations.";
+
+const skills = [
+    "Engineering Team Management & Hiring",
+    "Technical Product R&D",
+    "Full-Stack Software Architecture",
+    "AI Engineering",
+    "Product Management & Agile Methodologies",
+    "Data Modeling",
+    "Organizational Design",
+];
+
+const technologies = [
+    "Python (FastAPI, Flask)",
+    "Typescript/Javascript (React, Next.js, Node.js)",
+    "Go",
+    "PostgreSQL, BigQuery, Redshift",
+    "OpenAI API, LangChain, PGVector",
+    "AWS, GCP, Docker, Vercel, Pulumi",
+    "Github Actions",
+];
+
+const workHistory = [
+    // Change Research
+    {
+        company: "Change Research",
+        homepage: "https://changeresearch.com",
+        roles: [
+            { title: "Technical Lead", date: "Jan 2024 - Present" },
+            {
+                title: "Technical Consultant (Contract)",
+                date: "Aug 2023 - Jan 2024",
+            },
+            { title: "Lead Engineer", date: "May 2023 - Aug 2023" },
+            {
+                title: "Sr. Software Engineer, Team Lead",
+                date: "April 2022 - May 2023",
+            },
+        ],
+        description:
+            "Team leader during the 2022 US midterm election cycle and 2024 US presidential election cycle, driving innovation in technical architecture by establishing a serverless backend infrastructure and developing new applications. Streamlined data management and security, resulting in significant cost savings, and played a pivotal role in expanding the company's product offerings through participation in the New Product R&D team.",
+        achievements: [
+            "Led the architecture and team creation of a flagship data portal, positioning it as the central hub for all customer data access and future product innovation. Partnered with Product team to evolve a proof-of-concept into the “Synthesizer,” a production-grade retrieval-augmented generation (RAG) system querying OpenAI embeddings from PGVector/PostgreSQL to enable natural language search and citation-backed insights from proprietary polling data. Oversaw full-stack implementation (FastAPI, Next.js, TypeScript, Tailwind, ShadCN component library, OpenTelemetry, Segment) and product launch from idea to production. This platform sets a new industry standard for usability and insight gathering of political data.",
+            "Served as technical lead shaping product direction and long-term platform capabilities within a cross-functional R&D team exploring new business lines and product-market fit for the organization.",
+            "Set and executed a forward-looking technical architecture vision that enabled long-term product scalability and cost efficiency. Established a serverless backend infrastructure utilizing Python FastAPI containers on GCP CloudRun, CloudSQL PostgreSQL databases, and React frontends. Code is deployed via CI/CD pipelines created using Github Actions. Observability was implemented using OpenTelemetry and GCP Cloud Logging/Trace with Grafana for visualization. Successfully developed 5 new applications and migrated 1 existing application to leverage this new architecture.",
+            "Successfully oversaw the transition from Redis to PostgreSQL, enhancing system stability and generating an annual savings of $25k. Conducted infrastructure rightsizing and cleanup by reevaluating AWS expenditures and optimizing machine resources, yielding an additional $5k in annual savings.",
+            "Served as an active member of the company's Security team, leading a comprehensive security audit to enforce 2FA and monitor all 3rd party services utilized within the organization. Led CCPA and other privacy regulation compliance work across the organization. Acted as a technical consultant for customer contracts, ensuring adherence to compliance standards and requirements.",
+        ],
+    },
+    // ReFED
+    {
+        company: "ReFED",
+        homepage: "https://refed.org",
+        roles: [
+            { title: "Technical Lead (Director)", date: "Aug 2023 - Jan 2024" },
+        ],
+        description:
+            "Led software engineering efforts at ReFED, with primary focus on the Insights Engine and the 2023 data refresh. Drove adoption of a new product development and prioritization framework to support scaling efforts enabled by a multi-year $15M grant from the Ballmer Group.",
+        achievements: [
+            "Led ReFED's engineering function during a period of rapid organizational growth, managing a hybrid team of full-time engineers and contractors. Took ownership of the Insights Engine codebase and internal tools, improving maintainability, reliability, and handoff readiness.",
+            "Established a scalable product development lifecycle by introducing product operations artifacts (Product Opportunity Assessments, Product Requirements Document, etc.) and partnering with external product consultants to instill a modern, outcomes-driven product mindset across the organization.",
+            "Architected and led a full rebuild of ReFED's data pipelines, transforming them into a testable, reproducible system that enabled a successful year-end data refresh for the Insights Engine.",
+        ],
+    },
+    //   RevSpring
+    {
+        company: "RevSpring",
+        homepage: "https://revspringinc.com",
+        roles: [
+            { title: "Lead Product Engineer", date: "May 2021 - April 2022" },
+        ],
+        description:
+            "Product Engineering Team manager for OmniChannel, a new line of business at RevSpring the leading provider of healthcare financial engagement and payment solutions.",
+        achievements: [
+            "Bootstrapped the software engineering team architecting and building the flagship product, OmniBrain which coordinates intelligent patient communication across a combination of print and digital communication channels (SMS, email, IVR, etc.) based on patient demographic information and actions these patients take towards the ultimate goal of collecting payments. As the first dedicated employee in this new product organization, recruited and hired the 4 other employees and worked with the Product and Executive teams to define and deliver the MVP.",
+            "Design and architect the new product utilizing event-driven programming built on AWS products such as EventBridge, Kinesis Data Streams and Data Firehoses, ECS Fargate, Aurora Serverless Postgres, and Lambda. Backend application code written in Python, with APIs built on the FastAPI framework. Infrastructure as Code maintained using Pulumi. Frontend UI built using Angular. Code was CI/CD tested, built, and packaged as Docker containers using AWS CodeBuild, AWS CodePipelines, and Github Actions.",
+        ],
+    },
+    //   Ookla
+    {
+        company: "Ookla (formerly Mosaik, acquired July 2018)",
+        homepage: "https://ookla.com",
+        roles: [
+            {
+                title: "Product Manager (Ookla)",
+                date: "March 2019 - May 2021",
+            },
+            {
+                title: "Software Engineering Lead (Ookla)",
+                date: "July 2018 - March 2019",
+            },
+            {
+                title: "Sr. Software Engineer, Team Lead (Mosaik)",
+                date: "May 2018 - July 2018",
+            },
+            {
+                title: "Software Engineer (Mosaik)",
+                date: "January 2016 - May 2018",
+            },
+        ],
+        description:
+            "Product leader for the technical licensing of core technologies that drive the global leader in network performance testing to customers in the telecommunications space. Previously Engineering Lead and ScrumMaster on software teams responsible for maintaining core web services and data analytics pipelines. Prior to July 2018 acquisition of Mosaik by Ookla, led the development team responsible for providing insights into cellular coverage to network providers, governments, and infrastructure professionals.",
+        achievements: [
+            "Founded and led a high-growth product line from concept through launch, including roadmap ownership, pricing strategy, and cross-functional execution in a resource-constrained organization. Presented periodically to the steering committee to justify investment, showcase adoption metrics, and influence go/no-go decisions on continued expansion. Defined tiered pricing and feature packaging strategy for B2B telecom partners, aligning monetization with usage data and customer value.",
+            "Backend and database architect for real-time streaming ingestion platform responsible for 2 million new data points per day. Designed and implemented multi-process ingestion Python API which feeds into a PostgreSQL database data warehouse. Wrote Python data processing pipeline which transforms the raw data into cleaned, normalized data used in spatial aggregations. These aggregations were used to build a geospatial tile API built on top of Kubernetes used in web and mobile applications to visualize wireless coverage.",
+            "Leader on a team responsible for maintaining and enhancing a real-time data ingestion platform responsible for 300 million new data points per day. Data pipelines flow from real-time streaming JSON into an S3 data lake via Kinesis streams, batch processed into the Redshift data warehouse, and exported into application MySQL and PostgreSQL Aurora databases as aggregates and spatial data.",
+        ],
+    },
+    //   Sedgwick
+    {
+        company: "Sedgwick",
+        homepage: "https://sedgwick.com",
+        roles: [
+            {
+                title: "IT Applications Technician",
+                date: "June 2015 - January 2016",
+            },
+            {
+                title: "IT Applications Associate",
+                date: "August 2014 - June 2015",
+            },
+            {
+                title: "IT Applications Trainee",
+                date: "February 2014 - August 2014",
+            },
+        ],
+        description:
+            "Leader on a SCRUM Agile team responsible for creating and maintaining applications for the leading provider of technology-enabled claims and productivity management solutions. Part of the charter team converting several flat-file workflows to web services including data warehousing, database design, and web services using C# .NET and Oracle PL/SQL. All work was done while adhering to government and company mandated security and privacy compliance to protect customer personal data.",
+        achievements: [],
+    },
+    //   SHSM
+    {
+        company: "Sacred Heart Southern Missions",
+        homepage: "https://secure.shsm.org",
+        roles: [
+            {
+                title: "Information Systems Specialist II",
+                date: "July 2013 - February 2014",
+            },
+        ],
+        description:
+            "Responsible for moving several legacy VB6 applications into C#.NET to handle purchasing, shipping, and fulfillment of campaign materials to donors for a small non-profit. Designed a CRM database for use in social work using ASP .NET and Microsoft SQL Server.",
+        achievements: [],
+    },
+];
+
+const communityHistory = [
+    {
+        title: "DevMemphis",
+        role: "Co-Organizer",
+        date: "May 2023 - Present",
+        homepage: "https://devmemphis.org",
+        description:
+            "Co-Organizer for DevMemphis, a meet-up for Memphis software developers that explores many topics such as AI, web programming, systems programming, and career skills. Responsible for finding speakers, working with sponsors, and organizing events. Also have served as a speaker on topics such as AI, career skills, and cross-platform application creation.",
+    },
+    {
+        title: "CodeCrew",
+        role: "Mock Interviewer",
+        date: "June 2025-Present",
+        homepage: "https://www.code-crew.org/",
+        description:
+            "Conducted technical and behavioral mock interviews for CodeCrew Code School students, helping them build confidence, polish interview performance, and successfully transition into software engineering careers with support from Memphis's hands-on tech workforce development nonprofit.",
+    },
+];
+
+const education = [
+    {
+        institution: "Arena Academy",
+        degree: "Tech to Elections: Campaigns 101 for Tech Workers",
+        date: "January 2022",
+        homepage: "https://arena.run",
+    },
+    {
+        institution: "University of Mississippi",
+        degree: "B.A. History, Minor in Computer Science",
+        date: "August 2009 - May 2013",
+        homepage: "https://olemiss.edu",
+    },
+];
+---
+
+<MainLayout hideHeaderOnPrint hideFooterOnPrint title="Michael Johnsey Resume">
+    <div class="print:mx-2 print:text-sm">
+        {/* Header for printing*/}
+        <header class="hidden print:block text-center print:mb-2">
+            <h1 class="text-4xl font-bold">Michael Johnsey</h1>
+            <p class="text-sm">michael@johnsey.me</p>
+        </header>
+
+        {/* Executive Summary */}
+        <section class="mb-4 print:mb-2 print:leading-tight">
+            <p>{executiveSummary}</p>
+        </section>
+
+        {/* Skills & Technologies */}
+        <section class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8 print:mb-4">
+            <div>
+                <h2
+                    class="text-lg font-semibold mb-2 print:text-base print:mb-1"
+                >
+                    Primary Skills
+                </h2>
+                <ul
+                    class="list-disc list-inside space-y-0.5 print:space-y-0 print:leading-tight"
+                >
+                    {skills.map((skill) => <li key={skill}>{skill}</li>)}
+                </ul>
+            </div>
+            <div>
+                <h2
+                    class="text-lg font-semibold mb-2 print:text-base print:mb-1"
+                >
+                    Technology
+                </h2>
+                <ul
+                    class="list-disc list-inside space-y-0.5 print:space-y-0 print:leading-tight"
+                >
+                    {technologies.map((tech) => <li key={tech}>{tech}</li>)}
+                </ul>
+            </div>
+        </section>
+
+        {/* Work History */}
+        <section class="mb-8 print:mb-4">
+            <h2 class="text-xl font-semibold mb-2 print:mb-1">Work History</h2>
+            {
+                workHistory.map((job) => (
+                    <div
+                        class="mb-6 print:mb-4"
+                        key={job.company.toLowerCase().replace(/\s+/g, "-")}
+                    >
+                        <h3 class="text-lg font-semibold underline print:no-underline print:text-base">
+                            <a
+                                href={job.homepage}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {job.company}
+                            </a>
+                        </h3>
+                        <div class="mb-4 print:mb-2">
+                            <ul class=" print:text-sm">
+                                {job.roles.map((role) => (
+                                    <li
+                                        class="grid grid-cols-2"
+                                        key={role.title
+                                            .toLowerCase()
+                                            .replace(/\s+/g, "-")}
+                                    >
+                                        <span class="italic">{role.title}</span>
+                                        <span class="tabular-nums">
+                                            {role.date}
+                                        </span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <p class="mb-4 print:mb-1 print:leading-tight">
+                            {job.description}
+                        </p>
+                        <ul class="list-disc list-outside pl-4 space-y-2 print:pl-2 print:space-y-0.5">
+                            {job.achievements.map((achievement) => (
+                                <li
+                                    key={achievement}
+                                    class="print:leading-tight"
+                                >
+                                    {achievement}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                ))
+            }
+        </section>
+
+        {/* Community Involvement */}
+        <section class="mb-8 print:mb-4">
+            <h2 class="text-xl font-semibold mb-4 print:mb-2 print:text-lg">
+                Community
+            </h2>
+            {
+                communityHistory.map((entry) => (
+                    <div class="mb-4" key={entry.title}>
+                        <h3 class="text-base font-semibold underline print:text-sm print:no-underline">
+                            <a
+                                href={entry.homepage}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {entry.title}
+                            </a>
+                        </h3>
+                        <ul class="mb-2 text-sm">
+                            <li class="grid grid-cols-2">
+                                <span class="italic">{entry.role}</span>
+                                <span class="tabular-nums">{entry.date}</span>
+                            </li>
+                        </ul>
+                        <p class="text-sm">{entry.description}</p>
+                    </div>
+                ))
+            }
+        </section>
+
+        {/* Education */}
+        <section class="mb-8 print:mb-4">
+            <h2 class="text-xl font-semibold mb-4 print:mb-2 print:text-lg">
+                Education
+            </h2>
+            {
+                education.map((entry) => (
+                    <div
+                        class="mb-4"
+                        key={entry.institution
+                            .toLowerCase()
+                            .replace(/\s+/g, "-")}
+                    >
+                        <h3 class="text-base font-semibold underline print:text-sm print:no-underline">
+                            <a
+                                href={entry.homepage}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                {entry.institution}
+                            </a>
+                        </h3>
+                        <p class="text-sm">{entry.degree}</p>
+                        <p class="text-sm">{entry.date}</p>
+                    </div>
+                ))
+            }
+        </section>
+    </div>
+</MainLayout>
