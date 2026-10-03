@@ -1,6 +1,6 @@
 ---
 import "../../styles/global.css";
-import { getCollection, getEntry } from "astro:content";
+import { getCollection, getEntry, render } from "astro:content";
 import { AstroError } from "astro/errors";
 import Header from "../../components/header";
 import MainLayout from "../../layouts/MainLayout.astro";
@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   const posts = await getCollection("posts");
 
   return posts.map((post) => ({
-    params: { slug: post.slug },
+    params: { slug: post.id },
   }));
 }
 
@@ -20,7 +20,7 @@ const post = await getEntry("posts", slug);
 
 if (!post) throw new AstroError("Post not found");
 
-const { Content } = await post.render();
+const { Content } = await render(post);
 ---
 
 <MainLayout>
