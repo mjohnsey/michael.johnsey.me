@@ -42,7 +42,7 @@ const talks = (await getCollection("talks"))
       {
         posts.map((post) => (
           <li>
-            <a href={`/posts/${post.slug}/`} class="text-lg font-semibold">
+            <a href={`/posts/${post.id}/`} class="text-lg font-semibold">
               {post.data.title}
             </a>
             <p>{formatDate(post.data.pubDate)}</p>
@@ -59,7 +59,7 @@ const talks = (await getCollection("talks"))
       {
         talks.map((talk) => (
           <li>
-            <a href={`/talks/${talk.slug}/`} class="text-lg font-semibold">
+            <a href={`/talks/${talk.id}/`} class="text-lg font-semibold">
               {talk.data.title}
             </a>
             <p>{formatDate(talk.data.talkGivenDate)}</p>

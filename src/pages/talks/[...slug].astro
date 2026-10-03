@@ -1,6 +1,6 @@
 ---
 import "../../styles/global.css";
-import { getCollection, getEntry } from "astro:content";
+import { getCollection, getEntry, render } from "astro:content";
 import { AstroError } from "astro/errors";
 
 import MainLayout from "../../layouts/MainLayout.astro";
@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   const talks = await getCollection("talks");
 
   return talks.map((talk) => ({
-    params: { slug: talk.slug },
+    params: { slug: talk.id },
   }));
 }
 
@@ -20,7 +20,7 @@ const talk = await getEntry("talks", slug);
 
 if (!talk) throw new AstroError("Talk not found");
 
-const { Content } = await talk.render();
+const { Content } = await render(talk);
 const meetupGroup = talk.data.meetupGroup;
 const meetupUrl = talk.data.url;
 ---
